@@ -1,0 +1,2513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sip&Crunch - Edible Cups & Glasses | Zero-Waste Eco Friendly</title>
+    <meta name="description" content="Revolutionary edible cups made with natural sweeteners. Zero-waste, delicious, and eco-friendly cups you can eat!">
+    <meta name="keywords" content="edible cups, zero waste, eco friendly, jaggery sweetened, sustainable, Pune, Maharashtra">
+    <meta property="og:title" content="Sip&Crunch - Edible Cups">
+    <meta property="og:description" content="Eat your cup! 100% natural edible cups with zero refined sugar.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥤</text></svg>">
+    
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    
+    <style>
+        /* ====== ROOT VARIABLES ====== */
+        :root {
+            --primary: #C19A6B;
+            --secondary: #8B4513;
+            --accent: #228B22;
+            --accent-red: #D35400;
+            --dark: #2C1810;
+            --light: #FFF8DC;
+            --text: #3E2723;
+            --shadow: 0 8px 25px rgba(0,0,0,0.08);
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        /* ====== RESET & BASE ====== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        body.marathi {
+            font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* ====== UTILITY CLASSES ====== */
+        .text-center { text-align: center; }
+        .mt-20 { margin-top: 20px; }
+        .mb-20 { margin-bottom: 20px; }
+
+        /* ====== LANGUAGE SWITCHER ====== */
+        .language-switcher {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-right: 15px;
+        }
+
+        @media (min-width: 769px) {
+            .language-switcher {
+                margin-right: 20px;
+            }
+        }
+
+        .lang-btn {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 20px;
+            background: white;
+            color: var(--primary);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: inherit;
+            border: 2px solid var(--primary);
+            min-width: 60px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .lang-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* ====== HEADER ====== */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 248, 220, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        /* Desktop Navigation */
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .desktop-nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .desktop-nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: var(--transition);
+        }
+
+        .desktop-nav-links a:hover,
+        .desktop-nav-links a:focus {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .desktop-nav-links a.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .desktop-cart-icon {
+            position: relative;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--primary);
+            transition: var(--transition);
+            margin-left: 15px;
+        }
+
+        .desktop-cart-icon:hover {
+            color: var(--secondary);
+            transform: scale(1.1);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--accent-red);
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* ====== MOBILE CONTROLS ====== */
+        .mobile-controls {
+            display: none;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Mobile Menu Button - FIXED SIZE & BETTER VISIBILITY */
+        .mobile-menu-btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 36px;
+            height: 30px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 8px 6px;
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn:hover {
+            background: rgba(193, 154, 107, 0.1);
+        }
+
+        .mobile-menu-btn span {
+            width: 100%;
+            height: 3px;
+            background-color: var(--dark);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn.active {
+            background: rgba(193, 154, 107, 0.2);
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: translateY(11px) rotate(45deg);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: translateY(-11px) rotate(-45deg);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .mobile-menu-overlay.active {
+            display: block;
+        }
+
+        .mobile-menu-content {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 280px;
+            height: 100%;
+            background: var(--light);
+            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            padding: 80px 30px 30px;
+            z-index: 1000;
+            transition: var(--transition);
+            overflow-y: auto;
+        }
+
+        .mobile-menu-content.active {
+            right: 0;
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .mobile-nav-links a {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 15px;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .mobile-nav-links a:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .mobile-nav-links i {
+            width: 24px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .mobile-cart-count {
+            margin-left: auto;
+            background: var(--accent-red);
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* ====== IMAGE DISCLAIMER ====== */
+        .image-disclaimer {
+            text-align: center;
+            margin: 20px 0 40px;
+            padding: 15px;
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border-radius: var(--radius);
+            border: 2px dashed var(--accent-red);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.9; }
+            50% { opacity: 1; }
+        }
+
+        .image-disclaimer p {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin: 0;
+        }
+
+        .image-disclaimer .highlight-text {
+            color: var(--accent-red);
+            text-transform: uppercase;
+            font-size: 1.2rem;
+        }
+
+        /* ====== CART MODAL ====== */
+        .cart-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1100;
+        }
+
+        .cart-modal-overlay.active {
+            display: block;
+        }
+
+        .cart-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            width: 90%;
+            max-width: 500px;
+            max-height: 80vh;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            z-index: 1101;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .cart-modal.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .cart-header {
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-header h3 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .close-cart {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .cart-body {
+            padding: 20px;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .cart-empty {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+        }
+
+        .cart-empty i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #ddd;
+        }
+
+        .cart-items {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: #f9f5f0;
+            border-radius: var(--radius);
+            border: 1px solid #eee;
+        }
+
+        .cart-item-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+
+        .cart-item-info p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .cart-item-price {
+            font-weight: 600;
+            color: var(--accent-red);
+        }
+
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cart-quantity-btn {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .cart-quantity-btn:hover {
+            background: var(--secondary);
+        }
+
+        .cart-quantity-value {
+            font-weight: 600;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .remove-item {
+            background: var(--accent-red);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            margin-top: 5px;
+            transition: var(--transition);
+        }
+
+        .remove-item:hover {
+            background: #c0392b;
+        }
+
+        .cart-footer {
+            padding: 20px;
+            border-top: 1px solid #eee;
+            background: #f9f5f0;
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .total-amount {
+            color: var(--accent-red);
+            font-size: 1.5rem;
+        }
+
+        .cart-checkout-btn {
+            display: block;
+            width: 100%;
+            background: linear-gradient(45deg, var(--primary), var(--accent-red));
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .cart-checkout-btn:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(193, 154, 107, 0.3);
+        }
+
+        .cart-checkout-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        /* ====== HERO SECTION ====== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(255, 248, 220, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
+            position: relative;
+            margin-top: 70px;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .hero-tagline {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            color: var(--accent-red);
+            line-height: 1;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            color: var(--dark);
+            margin-bottom: 30px;
+        }
+
+        .hero-highlight {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 800;
+            color: var(--primary);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: var(--radius);
+            border: 3px dashed var(--secondary);
+            margin: 30px 0;
+            display: inline-block;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary), var(--accent-red));
+            color: white;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(193, 154, 107, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(193, 154, 107, 0.4);
+            background: linear-gradient(45deg, var(--accent-red), var(--primary));
+        }
+
+        /* ====== MENU SECTION ====== */
+        .menu {
+            background: var(--light);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            color: var(--primary);
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .menu-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--dark);
+            margin-bottom: 30px;
+        }
+
+        .badges-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .menu-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            box-shadow: var(--shadow);
+        }
+
+        .menu-badge i {
+            color: var(--accent);
+        }
+
+        .menu-badge.sugar-free i {
+            color: var(--accent-red);
+        }
+
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .menu-item {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .item-badges {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            z-index: 2;
+        }
+
+        .item-badge {
+            background: var(--accent);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .item-badge.sugar-free {
+            background: var(--accent-red);
+        }
+
+        .menu-item-img {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+            background: #f5f5f5;
+        }
+
+        .menu-item-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .menu-item:hover .menu-item-img img {
+            transform: scale(1.1);
+        }
+
+        .menu-item-content {
+            padding: 25px;
+        }
+
+        .menu-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .menu-item h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-right: 10px;
+            flex: 1;
+        }
+
+        .price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--accent-red);
+            background: var(--light);
+            padding: 5px 15px;
+            border-radius: 30px;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .menu-item .description {
+            color: var(--dark);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        /* Sweetness options */
+        .sweetness-options {
+            margin: 15px 0;
+            padding: 15px;
+            background: #f9f5f0;
+            border-radius: var(--radius);
+            border: 1px dashed var(--primary);
+        }
+
+        .sweetness-options h5 {
+            font-size: 1rem;
+            color: var(--secondary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .option-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .option-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            padding: 8px 15px;
+            background: white;
+            border-radius: 20px;
+            transition: var(--transition);
+            border: 1px solid #ddd;
+        }
+
+        .option-label:hover {
+            border-color: var(--primary);
+        }
+
+        .option-label input[type="radio"] {
+            display: none;
+        }
+
+        .option-label .custom-radio {
+            width: 18px;
+            height: 18px;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+        }
+
+        .option-label input[type="radio"]:checked + .custom-radio::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        .option-label input[type="radio"]:checked ~ span {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* Quantity selector */
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 15px 0;
+            padding: 10px 15px;
+            background: #f9f5f0;
+            border-radius: 30px;
+        }
+
+        .quantity-btn {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .quantity-btn:hover {
+            background: var(--secondary);
+        }
+
+        .quantity-value {
+            font-size: 1.2rem;
+            font-weight: 600;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        /* Add to Cart Button */
+        .add-to-cart-btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        .add-to-cart-btn:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(193, 154, 107, 0.2);
+        }
+
+        /* ====== ABOUT SECTION ====== */
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .about-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            background: #f5f5f5;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .ingredients {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .ingredient {
+            text-align: center;
+            padding: 20px;
+            background: var(--light);
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .ingredient:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow);
+        }
+
+        .ingredient i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        /* ====== CONTACT SECTION ====== */
+        .contact {
+            background: var(--light);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+
+        /* Status Badge */
+        .status-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--accent), var(--primary));
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        /* Instagram Link */
+        .instagram-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #E4405F;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 5px;
+            transition: var(--transition);
+        }
+
+        .instagram-link:hover {
+            color: #C13584;
+            transform: translateY(-2px);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .submit-btn:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* ====== FOOTER ====== */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .footer-links h4,
+        .footer-social h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /* ====== NOTIFICATION ====== */
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 15px 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 1003;
+        }
+
+        .notification.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* ====== RESPONSIVE DESIGN ====== */
+        @media (min-width: 769px) {
+            .mobile-controls {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .desktop-nav {
+                display: none;
+            }
+            
+            .mobile-controls {
+                display: flex;
+                gap: 10px;
+            }
+            
+            .menu-items {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero {
+                text-align: center;
+                margin-top: 60px;
+            }
+            
+            .image-disclaimer {
+                margin: 15px 0 30px;
+                padding: 12px;
+            }
+            
+            .image-disclaimer p {
+                font-size: 1rem;
+            }
+            
+            .image-disclaimer .highlight-text {
+                font-size: 1.1rem;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .ingredients {
+                grid-template-columns: 1fr;
+            }
+            
+            .language-switcher {
+                margin-right: 10px;
+                gap: 5px;
+            }
+            
+            .lang-btn {
+                padding: 7px 14px;
+                font-size: 0.85rem;
+                min-width: 48px;
+            }
+            
+            .mobile-menu-btn {
+                width: 34px;
+                height: 28px;
+                padding: 7px 5px;
+            }
+            
+            .mobile-menu-btn span {
+                height: 3px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-tagline {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .mobile-controls {
+                gap: 8px;
+            }
+            
+            .language-switcher {
+                gap: 4px;
+            }
+            
+            .lang-btn {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+                min-width: 44px;
+            }
+            
+            .mobile-menu-btn {
+                width: 32px;
+                height: 26px;
+                padding: 6px 4px;
+            }
+            
+            .mobile-menu-btn span {
+                height: 2.5px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .mobile-controls {
+                gap: 6px;
+            }
+            
+            .language-switcher {
+                gap: 3px;
+                margin-right: 8px;
+            }
+            
+            .lang-btn {
+                padding: 5px 10px;
+                font-size: 0.75rem;
+                min-width: 40px;
+            }
+            
+            .mobile-menu-btn {
+                width: 30px;
+                height: 24px;
+                padding: 5px 3px;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to content link -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo" aria-label="Sip&Crunch Home">
+                <i class="fas fa-cookie-bite"></i>
+                Sip&<span>Crunch</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav" aria-label="Main navigation">
+                <!-- Language Switcher -->
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="mr">मर</button>
+                </div>
+                
+                <ul class="desktop-nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                
+                <div class="desktop-cart-icon" id="desktop-cart-icon" aria-label="View cart" role="button" tabindex="0">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="desktop-cart-count">0</span>
+                </div>
+            </nav>
+            
+            <!-- Mobile Controls -->
+            <div class="mobile-controls">
+                <!-- Language Switcher for Mobile -->
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="mr">मर</button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-content" id="mobile-menu-content">
+        <div class="mobile-menu-header">
+            <h3>Sip&Crunch</h3>
+        </div>
+        <ul class="mobile-nav-links" role="menu">
+            <li role="none">
+                <a href="#home" id="mobile-home-link" role="menuitem">
+                    <i class="fas fa-home"></i>
+                    <span data-i18n="nav.home">Home</span>
+                </a>
+            </li>
+            <li role="none">
+                <a href="#about" id="mobile-about-link" role="menuitem">
+                    <i class="fas fa-info-circle"></i>
+                    <span data-i18n="nav.about">About</span>
+                </a>
+            </li>
+            <li role="none">
+                <a href="#menu" id="mobile-menu-link" role="menuitem">
+                    <i class="fas fa-utensils"></i>
+                    <span data-i18n="nav.menu">Menu</span>
+                </a>
+            </li>
+            <li role="none">
+                <a href="#" id="mobile-cart-link" role="menuitem">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span data-i18n="nav.cart">Cart</span>
+                    <span class="mobile-cart-count" id="mobile-cart-count">0</span>
+                </a>
+            </li>
+            <li role="none">
+                <a href="#contact" id="mobile-contact-link" role="menuitem">
+                    <i class="fas fa-envelope"></i>
+                    <span data-i18n="nav.contact">Contact</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal-overlay" id="cart-modal-overlay"></div>
+    <div class="cart-modal" id="cart-modal" role="dialog" aria-labelledby="cart-title">
+        <div class="cart-header">
+            <h3 id="cart-title" data-i18n="cart.title">Your Cart</h3>
+            <button class="close-cart" id="close-cart" aria-label="Close cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-body" id="cart-body">
+            <div class="cart-empty">
+                <i class="fas fa-shopping-cart"></i>
+                <p data-i18n="cart.empty">Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span data-i18n="cart.total">Total:</span>
+                <span class="total-amount" id="cart-total">₹0</span>
+            </div>
+            <button class="cart-checkout-btn" id="checkout-btn" disabled>
+                <i class="fas fa-bolt"></i>
+                <span data-i18n="cart.checkout">Proceed to Payment</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 data-i18n="hero.title">Revolutionary Edible Cups</h1>
+                    
+                    <div class="hero-tagline" data-i18n="hero.tagline">Eat Your Cup!</div>
+                    
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">Zero-waste, delicious, and eco-friendly edible cups & glasses for all beverages. Sweetened naturally with jaggery & dates!</p>
+                    
+                    <div class="hero-highlight">
+                        <i class="fas fa-leaf"></i> 
+                        <span data-i18n="hero.highlight">100% Natural Sweetness (No Sugar!)</span>
+                    </div>
+                    
+                    <a href="#menu" class="cta-button" aria-label="Browse our menu">
+                        <i class="fas fa-utensils"></i> 
+                        <span data-i18n="hero.cta">Order Now</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section class="menu" id="menu">
+            <div class="container">
+                <h2 class="section-title" data-i18n="menu.title">Our Menu</h2>
+                
+                <p class="menu-subtitle" data-i18n="menu.subtitle">All items served in edible cups. Choose your sweetness preference!</p>
+                
+                <div class="badges-container">
+                    <div class="menu-badge">
+                        <i class="fas fa-leaf"></i> 
+                        <span data-i18n="menu.badge1">Edible Cup</span>
+                    </div>
+                    <div class="menu-badge">
+                        <i class="fas fa-wheat-awn"></i> 
+                        <span data-i18n="menu.badge2">Gluten-Free</span>
+                    </div>
+                    <div class="menu-badge sugar-free">
+                        <i class="fas fa-candy-cane"></i> 
+                        <span data-i18n="menu.badge3">No Refined Sugar</span>
+                    </div>
+                </div>
+                
+                <!-- Image Disclaimer -->
+                <div class="image-disclaimer">
+                    <p><strong data-i18n="disclaimer.title">⚠️ NOTE:</strong> <span class="highlight-text" data-i18n="disclaimer.text">ALL IMAGES ARE FOR REFERENCE ONLY</span></p>
+                </div>
+                
+                <div class="menu-items" id="menu-items">
+                    <!-- Menu items will be loaded from JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="section-title" data-i18n="about.title">Our Philosophy</h2>
+                
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1514228742587-6b1558fcf93a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Delicious edible cups on a wooden table" loading="lazy">
+                    </div>
+                    <div class="about-text">
+                        <p data-i18n="about.text1">At Sip&Crunch, we believe indulgence can be healthy and sustainable. That's why we've completely eliminated refined sugar from our edible cups.</p>
+                        
+                        <p data-i18n="about.text2">Instead, we use organic jaggery and premium dates to naturally sweeten our cups. This not only enhances flavor but also adds nutritional value.</p>
+                        
+                        <div class="ingredients">
+                            <div class="ingredient">
+                                <i class="fas fa-cubes"></i>
+                                <h4 data-i18n="about.ingredient1.title">Organic Jaggery</h4>
+                                <p data-i18n="about.ingredient1.desc">Iron-rich natural sweetener</p>
+                            </div>
+                            <div class="ingredient">
+                                <i class="fas fa-apple-alt"></i>
+                                <h4 data-i18n="about.ingredient2.title">Premium Dates</h4>
+                                <p data-i18n="about.ingredient2.desc">Fiber & antioxidant source</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title" data-i18n="contact.title">Contact Us</h2>
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 data-i18n="contact.location.title">Our Location</h4>
+                                <p data-i18n="contact.location.text">Currently Online, Offline Coming Soon!</p>
+                                <span class="status-badge" data-i18n="contact.location.status">Status: Online Only</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 data-i18n="contact.instagram.title">Follow on Instagram</h4>
+                                <a href="https://instagram.com/sipandcrunch" target="_blank" rel="noopener noreferrer" class="instagram-link">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>@sipandcrunch</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contact-form">
+                        <input type="text" id="name" data-placeholder="contact.form.name" required aria-label="Your name">
+                        <input type="email" id="email" data-placeholder="contact.form.email" required aria-label="Your email">
+                        <textarea id="message" data-placeholder="contact.form.message" required aria-label="Your message"></textarea>
+                        <button type="submit" class="submit-btn">
+                            <span data-i18n="contact.form.submit">Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Sip&Crunch</div>
+                    <p data-i18n="footer.about">Serving sustainability in every sip. Edible cups sweetened with jaggery & dates.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 data-i18n="footer.links.title">Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" data-i18n="footer.links.home">Home</a></li>
+                        <li><a href="#about" data-i18n="footer.links.about">About Us</a></li>
+                        <li><a href="#menu" data-i18n="footer.links.menu">Menu</a></li>
+                        <li><a href="#contact" data-i18n="footer.links.contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4 data-i18n="footer.social.title">Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/sipandcrunch" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p data-i18n="footer.copyright">&copy; 2023 Sip&Crunch. All rights reserved. Made with ❤️ in Maharashtra.</p>
+                <p data-i18n="footer.status">Currently operating online. Offline store coming soon!</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // ====== CONFIGURATION ======
+        const CONFIG = {
+            RAZORPAY_KEY: 'rzp_test_1DP5mmOlF5G5ag', // Test key - Replace with your actual key
+            COMPANY_NAME: 'Sip&Crunch',
+            INSTAGRAM_URL: 'https://instagram.com/sipandcrunch',
+            WHATSAPP_NUMBER: '919999999999'
+        };
+
+        // ====== INTERNATIONALIZATION ======
+        const i18n = {
+            en: {
+                // Navigation
+                'nav.home': 'Home',
+                'nav.about': 'About',
+                'nav.menu': 'Menu',
+                'nav.cart': 'Cart',
+                'nav.contact': 'Contact',
+                
+                // Hero
+                'hero.title': 'Revolutionary Edible Cups',
+                'hero.tagline': 'Eat Your Cup!',
+                'hero.subtitle': 'Zero-waste, delicious, and eco-friendly edible cups & glasses for all beverages. Sweetened naturally with jaggery & dates!',
+                'hero.highlight': '100% Natural Sweetness (No Sugar!)',
+                'hero.cta': 'Order Now',
+                
+                // Menu
+                'menu.title': 'Our Menu',
+                'menu.subtitle': 'All items served in edible cups. Choose your sweetness preference!',
+                'menu.badge1': 'Edible Cup',
+                'menu.badge2': 'Gluten-Free',
+                'menu.badge3': 'No Refined Sugar',
+                'menu.addToCart': 'Add to Cart',
+                'menu.quantity': 'Quantity',
+                'menu.sweetness': 'Sweetness Options:',
+                'menu.withJaggery': 'With Jaggery/Dates',
+                'menu.withoutJaggery': 'Without Jaggery/Dates',
+                'menu.popular': 'Popular',
+                'menu.new': 'New',
+                'menu.classic': 'Classic',
+                'menu.traditional': 'Traditional',
+                
+                // Disclaimer
+                'disclaimer.title': '⚠️ NOTE:',
+                'disclaimer.text': 'ALL IMAGES ARE FOR REFERENCE ONLY',
+                
+                // About
+                'about.title': 'Our Philosophy',
+                'about.text1': 'At Sip&Crunch, we believe indulgence can be healthy and sustainable. That\'s why we\'ve completely eliminated refined sugar from our edible cups.',
+                'about.text2': 'Instead, we use organic jaggery and premium dates to naturally sweeten our cups. This not only enhances flavor but also adds nutritional value.',
+                'about.ingredient1.title': 'Organic Jaggery',
+                'about.ingredient1.desc': 'Iron-rich natural sweetener',
+                'about.ingredient2.title': 'Premium Dates',
+                'about.ingredient2.desc': 'Fiber & antioxidant source',
+                
+                // Contact
+                'contact.title': 'Contact Us',
+                'contact.location.title': 'Our Location',
+                'contact.location.text': 'Currently Online, Offline Coming Soon!',
+                'contact.location.status': 'Status: Online Only',
+                'contact.instagram.title': 'Follow on Instagram',
+                'contact.form.name': 'Your Name',
+                'contact.form.email': 'Your Email',
+                'contact.form.message': 'Your Message',
+                'contact.form.submit': 'Send Message',
+                
+                // Footer
+                'footer.about': 'Serving sustainability in every sip. Edible cups sweetened with jaggery & dates.',
+                'footer.links.title': 'Quick Links',
+                'footer.links.home': 'Home',
+                'footer.links.about': 'About Us',
+                'footer.links.menu': 'Menu',
+                'footer.links.contact': 'Contact',
+                'footer.social.title': 'Follow Us',
+                'footer.copyright': '© 2023 Sip&Crunch. All rights reserved. Made with ❤️ in Maharashtra.',
+                'footer.status': 'Currently operating online. Offline store coming soon!',
+                
+                // Cart
+                'cart.title': 'Your Cart',
+                'cart.empty': 'Your cart is empty',
+                'cart.total': 'Total:',
+                'cart.checkout': 'Proceed to Payment',
+                'cart.remove': 'Remove',
+                'cart.added': 'Added to cart!',
+                
+                // Messages
+                'success.order': 'Order placed successfully!',
+                'success.contact': 'Message sent successfully!',
+                'error.emptyCart': 'Your cart is empty!',
+                'error.general': 'Something went wrong. Please try again.'
+            },
+            mr: {
+                // Navigation
+                'nav.home': 'होम',
+                'nav.about': 'आमच्याबद्दल',
+                'nav.menu': 'मेनू',
+                'nav.cart': 'कार्ट',
+                'nav.contact': 'संपर्क',
+                
+                // Hero
+                'hero.title': 'क्रांतिकारक खाण्यायोग्य कप',
+                'hero.tagline': 'तुमचा कप खा!',
+                'hero.subtitle': 'शून्य कचरा, स्वादिष्ट आणि पर्यावरणास अनुकूल खाण्यायोग्य कप आणि ग्लास. गुळ आणि खजूर यांनी नैसर्गिकरित्या गोड केलेले!',
+                'hero.highlight': '100% नैसर्गिक गोडवा (साखर नाही!)',
+                'hero.cta': 'आता ऑर्डर करा',
+                
+                // Menu
+                'menu.title': 'आमचे मेनू',
+                'menu.subtitle': 'सर्व आयटम खाण्यायोग्य कपमध्ये सर्व्ह केले जातात. तुमची गोडवा प्राधान्य निवडा!',
+                'menu.badge1': 'खाण्यायोग्य कप',
+                'menu.badge2': 'ग्लुटेन-मुक्त',
+                'menu.badge3': 'रिफाइंड साखर नाही',
+                'menu.addToCart': 'कार्टमध्ये जोडा',
+                'menu.quantity': 'प्रमाण',
+                'menu.sweetness': 'गोडवा पर्याय:',
+                'menu.withJaggery': 'गुळ/खजूर सह',
+                'menu.withoutJaggery': 'गुळ/खजूर शिवाय',
+                'menu.popular': 'लोकप्रिय',
+                'menu.new': 'नवीन',
+                'menu.classic': 'क्लासिक',
+                'menu.traditional': 'पारंपारिक',
+                
+                // Disclaimer
+                'disclaimer.title': '⚠️ सूचना:',
+                'disclaimer.text': 'सर्व चित्रे फक्त संदर्भासाठी आहेत',
+                
+                // About
+                'about.title': 'आमचे तत्वज्ञान',
+                'about.text1': 'सिप आणि क्रंच येथे, आम्हाला विश्वास आहे की आरामदायकता निरोगी आणि शाश्वत असू शकते. म्हणूनच आम्ही आमच्या खाण्यायोग्य कपमधून रिफाइंड साखर पूर्णपणे काढून टाकली आहे.',
+                'about.text2': 'त्याऐवजी, आम्ही आमचे कप नैसर्गिकरित्या गोड करण्यासाठी सेंद्रिय गुळ आणि प्रीमियम खजूर वापरतो. हे केवळ चव वाढवत नाही तर पौष्टिक मूल्य देखील जोडते.',
+                'about.ingredient1.title': 'सेंद्रिय गुळ',
+                'about.ingredient1.desc': 'लोहयुक्त नैसर्गिक गोडवा',
+                'about.ingredient2.title': 'प्रीमियम खजूर',
+                'about.ingredient2.desc': 'फायबर आणि अँटिऑक्सिडंट स्रोत',
+                
+                // Contact
+                'contact.title': 'आमच्याशी संपर्क साधा',
+                'contact.location.title': 'आमचे स्थान',
+                'contact.location.text': 'सध्या ऑनलाइन, ऑफलाइन लवकरच येत आहे!',
+                'contact.location.status': 'स्थिती: फक्त ऑनलाइन',
+                'contact.instagram.title': 'इन्स्टाग्रामवर फॉलो करा',
+                'contact.form.name': 'तुमचे नाव',
+                'contact.form.email': 'तुमचा ईमेल',
+                'contact.form.message': 'तुमचा संदेश',
+                'contact.form.submit': 'संदेश पाठवा',
+                
+                // Footer
+                'footer.about': 'प्रत्येक चुसक्यात शाश्वतता सर्व्ह करत आहे. गुळ आणि खजूर यांनी गोड केलेले खाण्यायोग्य कप.',
+                'footer.links.title': 'द्रुत दुवे',
+                'footer.links.home': 'होम',
+                'footer.links.about': 'आमच्याबद्दल',
+                'footer.links.menu': 'मेनू',
+                'footer.links.contact': 'संपर्क',
+                'footer.social.title': 'आमचं अनुसरण करा',
+                'footer.copyright': '© २०२३ सिपआणिक्रंच. सर्व हक्क राखीव. महाराष्ट्रात ❤️ सह बनवले.',
+                'footer.status': 'सध्या ऑनलाइन कार्यरत आहे. ऑफलाइन स्टोर लवकरच येत आहे!',
+                
+                // Cart
+                'cart.title': 'तुमची कार्ट',
+                'cart.empty': 'तुमची कार्ट रिकामी आहे',
+                'cart.total': 'एकूण:',
+                'cart.checkout': 'पेमेंट करा',
+                'cart.remove': 'काढून टाका',
+                'cart.added': 'कार्टमध्ये जोडले!',
+                
+                // Messages
+                'success.order': 'ऑर्डर यशस्वीरित्या झाले!',
+                'success.contact': 'संदेश यशस्वीरित्या पाठवला!',
+                'error.emptyCart': 'तुमची कार्ट रिकामी आहे!',
+                'error.general': 'काहीतरी चूक झाली. कृपया पुन्हा प्रयत्न करा.'
+            }
+        };
+
+        // ====== PRODUCT DATA ======
+        const PRODUCTS = [
+            {
+                id: 'hot-chocolate',
+                name: 'Hot Chocolate',
+                nameMr: 'हॉट चॉकलेट',
+                description: 'Rich hot chocolate with chocolate sauce and brownie toppings. Served in an edible chocolate cup.',
+                descriptionMr: 'चॉकलेट सॉस आणि ब्राउनी टॉपिंगसह समृद्ध हॉट चॉकलेट. खाण्यायोग्य चॉकलेट कपमध्ये सर्व्ह केले.',
+                price: 50,
+                image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                badges: ['popular'],
+                hasSweetness: false
+            },
+            {
+                id: 'hot-caramel',
+                name: 'Hot Caramel',
+                nameMr: 'हॉट कॅरमेल',
+                description: 'Creamy hot caramel with caramel sauce and brownie topping. Served in an edible caramel cup.',
+                descriptionMr: 'कॅरमेल सॉस आणि ब्राउनी टॉपिंगसह क्रीमी हॉट कॅरमेल. खाण्यायोग्य कॅरमेल कपमध्ये सर्व्ह केले.',
+                price: 50,
+                image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                badges: ['new'],
+                hasSweetness: false
+            },
+            {
+                id: 'coffee',
+                name: 'Mild Classic Coffee',
+                nameMr: 'माइल्ड क्लासिक कॉफी',
+                description: 'Perfect blend of premium coffee beans. Served in an edible coffee-flavored cup.',
+                descriptionMr: 'प्रीमियम कॉफी बीन्सचा परफेक्ट ब्लेंड. खाण्यायोग्य कॉफी-फ्लेवर कपमध्ये सर्व्ह केले.',
+                price: 40,
+                image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                badges: ['classic'],
+                hasSweetness: true
+            },
+            {
+                id: 'tea',
+                name: 'Indian Classical Kadak Tea',
+                nameMr: 'इंडियन क्लासिकल कडक चहा',
+                description: 'Authentic Indian tea with aromatic spices. Served in an edible masala tea cup.',
+                descriptionMr: 'सुगंधित मसाल्यांसह ऑथेंटिक इंडियन चहा. खाण्यायोग्य मसाला चहा कपमध्ये सर्व्ह केले.',
+                price: 40,
+                image: 'https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                badges: ['traditional'],
+                hasSweetness: true
+            }
+        ];
+
+        // ====== STATE MANAGEMENT ======
+        const state = {
+            cart: JSON.parse(localStorage.getItem('cart')) || [],
+            currentLang: localStorage.getItem('language') || 'en',
+            isCartOpen: false
+        };
+
+        // ====== DOM ELEMENTS ======
+        const dom = {
+            body: document.body,
+            languageSwitcher: document.querySelectorAll('.language-switcher'),
+            langButtons: document.querySelectorAll('.lang-btn'),
+            mobileMenuBtn: document.getElementById('mobile-menu-btn'),
+            mobileMenuOverlay: document.getElementById('mobile-menu-overlay'),
+            mobileMenuContent: document.getElementById('mobile-menu-content'),
+            desktopCartIcon: document.getElementById('desktop-cart-icon'),
+            mobileCartLink: document.getElementById('mobile-cart-link'),
+            cartModalOverlay: document.getElementById('cart-modal-overlay'),
+            cartModal: document.getElementById('cart-modal'),
+            closeCartBtn: document.getElementById('close-cart'),
+            cartBody: document.getElementById('cart-body'),
+            cartTotal: document.getElementById('cart-total'),
+            checkoutBtn: document.getElementById('checkout-btn'),
+            desktopCartCount: document.getElementById('desktop-cart-count'),
+            mobileCartCount: document.getElementById('mobile-cart-count'),
+            menuItems: document.getElementById('menu-items'),
+            contactForm: document.getElementById('contact-form'),
+            notification: document.getElementById('notification'),
+            navLinks: document.querySelectorAll('a[href^="#"]')
+        };
+
+        // ====== INITIALIZATION ======
+        function init() {
+            // Set initial language
+            setLanguage(state.currentLang);
+            
+            // Load menu items
+            renderMenuItems();
+            
+            // Update cart count
+            updateCartCount();
+            
+            // Setup event listeners
+            setupEventListeners();
+            
+            // Setup smooth scrolling
+            setupSmoothScrolling();
+            
+            // Setup header scroll effect
+            setupHeaderScroll();
+            
+            // Set form placeholders
+            updateFormPlaceholders();
+            
+            console.log('✅ Website initialized successfully!');
+        }
+
+        // ====== LANGUAGE MANAGEMENT ======
+        function setLanguage(lang) {
+            state.currentLang = lang;
+            localStorage.setItem('language', lang);
+            
+            // Update body class
+            dom.body.classList.toggle('marathi', lang === 'mr');
+            
+            // Update language buttons
+            dom.langButtons.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+            
+            // Update all translatable elements
+            updateTranslations(lang);
+            
+            // Update form placeholders
+            updateFormPlaceholders();
+            
+            // Re-render menu items with new language
+            renderMenuItems();
+            
+            // Re-render cart items with new language
+            renderCartItems();
+            
+            // Show notification
+            showNotification(lang === 'en' ? 'Language switched to English' : 'भाषा मराठीमध्ये बदलली');
+            
+            console.log(`🌐 Language set to: ${lang}`);
+        }
+
+        function updateTranslations(lang) {
+            // Update all elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (i18n[lang] && i18n[lang][key]) {
+                    el.textContent = i18n[lang][key];
+                } else {
+                    console.warn(`Missing translation for key: ${key} in language: ${lang}`);
+                }
+            });
+        }
+
+        function updateFormPlaceholders() {
+            document.querySelectorAll('[data-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-placeholder');
+                if (i18n[state.currentLang][key]) {
+                    el.placeholder = i18n[state.currentLang][key];
+                }
+            });
+        }
+
+        // ====== MENU MANAGEMENT ======
+        function renderMenuItems() {
+            const lang = state.currentLang;
+            dom.menuItems.innerHTML = PRODUCTS.map(product => `
+                <div class="menu-item">
+                    <div class="item-badges">
+                        ${product.badges.map(badge => `
+                            <span class="item-badge" data-i18n="menu.${badge}">
+                                ${i18n[lang][`menu.${badge}`]}
+                            </span>
+                        `).join('')}
+                    </div>
+                    <div class="menu-item-img">
+                        <img src="${product.image}" 
+                             alt="${lang === 'en' ? product.name : product.nameMr}" 
+                             loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>${lang === 'en' ? product.name : product.nameMr}</h3>
+                            <div class="price">₹${product.price}</div>
+                        </div>
+                        <p class="description">
+                            ${lang === 'en' ? product.description : product.descriptionMr}
+                        </p>
+                        
+                        ${product.hasSweetness ? `
+                            <div class="sweetness-options">
+                                <h5><i class="fas fa-candy-cane"></i> 
+                                    <span data-i18n="menu.sweetness">${i18n[lang]['menu.sweetness']}</span>
+                                </h5>
+                                <div class="option-group">
+                                    <label class="option-label" data-for="${product.id}">
+                                        <input type="radio" name="${product.id}-sweetness" value="with-jaggery" checked>
+                                        <span class="custom-radio"></span>
+                                        <span data-i18n="menu.withJaggery">${i18n[lang]['menu.withJaggery']}</span>
+                                    </label>
+                                    <label class="option-label" data-for="${product.id}">
+                                        <input type="radio" name="${product.id}-sweetness" value="without-jaggery">
+                                        <span class="custom-radio"></span>
+                                        <span data-i18n="menu.withoutJaggery">${i18n[lang]['menu.withoutJaggery']}</span>
+                                    </label>
+                                </div>
+                            </div>
+                        ` : ''}
+                        
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus" data-item="${product.id}">-</button>
+                            <span class="quantity-value" data-item="${product.id}">1</span>
+                            <button class="quantity-btn plus" data-item="${product.id}">+</button>
+                        </div>
+                        
+                        <button class="add-to-cart-btn" 
+                                data-id="${product.id}"
+                                data-price="${product.price}">
+                            <i class="fas fa-cart-plus"></i> 
+                            <span data-i18n="menu.addToCart">${i18n[lang]['menu.addToCart']}</span>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Re-attach event listeners for new buttons
+            attachMenuEventListeners();
+            
+            // Update translations for newly rendered elements
+            updateTranslations(state.currentLang);
+            
+            console.log('✅ Menu items rendered');
+        }
+
+        // ====== CART MANAGEMENT ======
+        function addToCart(productId, quantity, sweetness = 'with-jaggery') {
+            const product = PRODUCTS.find(p => p.id === productId);
+            if (!product) return;
+            
+            const existingItem = state.cart.find(item => 
+                item.id === productId && item.sweetness === sweetness
+            );
+            
+            if (existingItem) {
+                existingItem.quantity += quantity;
+            } else {
+                state.cart.push({
+                    id: productId,
+                    name: state.currentLang === 'en' ? product.name : product.nameMr,
+                    price: product.price,
+                    quantity: quantity,
+                    sweetness: sweetness
+                });
+            }
+            
+            // Save to localStorage
+            localStorage.setItem('cart', JSON.stringify(state.cart));
+            
+            // Update UI
+            updateCartCount();
+            
+            // Show notification
+            const message = i18n[state.currentLang]['cart.added'];
+            showNotification(message);
+            
+            console.log(`🛒 Added ${quantity}x ${product.name} to cart`);
+        }
+
+        function updateCartCount() {
+            const count = state.cart.reduce((total, item) => total + item.quantity, 0);
+            dom.desktopCartCount.textContent = count;
+            dom.mobileCartCount.textContent = count;
+            dom.checkoutBtn.disabled = count === 0;
+        }
+
+        function renderCartItems() {
+            const lang = state.currentLang;
+            
+            if (state.cart.length === 0) {
+                dom.cartBody.innerHTML = `
+                    <div class="cart-empty">
+                        <i class="fas fa-shopping-cart"></i>
+                        <p data-i18n="cart.empty">${i18n[lang]['cart.empty']}</p>
+                    </div>
+                `;
+                dom.cartTotal.textContent = '₹0';
+                return;
+            }
+            
+            let total = 0;
+            let itemsHTML = '<div class="cart-items">';
+            
+            state.cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                
+                let sweetnessText = '';
+                if (item.sweetness) {
+                    sweetnessText = item.sweetness === 'with-jaggery' 
+                        ? ` (${i18n[lang]['menu.withJaggery']})`
+                        : ` (${i18n[lang]['menu.withoutJaggery']})`;
+                }
+                
+                itemsHTML += `
+                    <div class="cart-item">
+                        <div class="cart-item-info">
+                            <h4>${item.name}</h4>
+                            <p>${sweetnessText}</p>
+                            <div class="cart-item-price">₹${item.price} × ${item.quantity} = ₹${itemTotal}</div>
+                            <button class="remove-item" data-index="${index}">
+                                <i class="fas fa-trash"></i>
+                                <span data-i18n="cart.remove">${i18n[lang]['cart.remove']}</span>
+                            </button>
+                        </div>
+                        <div class="cart-item-quantity">
+                            <button class="cart-quantity-btn minus" data-index="${index}">-</button>
+                            <span class="cart-quantity-value">${item.quantity}</span>
+                            <button class="cart-quantity-btn plus" data-index="${index}">+</button>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            itemsHTML += '</div>';
+            dom.cartBody.innerHTML = itemsHTML;
+            dom.cartTotal.textContent = `₹${total}`;
+            
+            // Update translations in cart
+            updateTranslations(state.currentLang);
+            
+            // Attach cart item event listeners
+            attachCartItemEventListeners();
+        }
+
+        function updateCartItemQuantity(index, change) {
+            const item = state.cart[index];
+            const newQuantity = item.quantity + change;
+            
+            if (newQuantity < 1) {
+                state.cart.splice(index, 1);
+            } else if (newQuantity <= 10) {
+                item.quantity = newQuantity;
+            }
+            
+            localStorage.setItem('cart', JSON.stringify(state.cart));
+            renderCartItems();
+            updateCartCount();
+        }
+
+        function removeCartItem(index) {
+            state.cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(state.cart));
+            renderCartItems();
+            updateCartCount();
+        }
+
+        // ====== CHECKOUT ======
+        async function processCheckout() {
+            if (state.cart.length === 0) {
+                showNotification(i18n[state.currentLang]['error.emptyCart']);
+                return;
+            }
+            
+            const total = state.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const description = state.cart.map(item => 
+                `${item.name} x${item.quantity}`
+            ).join(', ');
+            
+            try {
+                // In production, you would fetch order details from your backend
+                const orderData = {
+                    amount: total * 100, // Convert to paise
+                    currency: "INR",
+                    receipt: `order_${Date.now()}`,
+                    notes: {
+                        items: JSON.stringify(state.cart)
+                    }
+                };
+                
+                // For now, we'll simulate backend response
+                const orderId = `order_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+                
+                // Initialize Razorpay
+                const options = {
+                    key: CONFIG.RAZORPAY_KEY,
+                    amount: orderData.amount,
+                    currency: orderData.currency,
+                    name: CONFIG.COMPANY_NAME,
+                    description: description,
+                    order_id: orderId,
+                    handler: function(response) {
+                        handlePaymentSuccess(response);
+                    },
+                    prefill: {
+                        name: document.getElementById('name')?.value || 'Customer',
+                        email: document.getElementById('email')?.value || 'customer@example.com',
+                        contact: CONFIG.WHATSAPP_NUMBER
+                    },
+                    theme: {
+                        color: "#C19A6B"
+                    },
+                    modal: {
+                        ondismiss: function() {
+                            console.log('Payment cancelled');
+                        }
+                    }
+                };
+                
+                const rzp = new Razorpay(options);
+                rzp.open();
+                
+            } catch (error) {
+                console.error('Checkout error:', error);
+                showNotification(i18n[state.currentLang]['error.general']);
+            }
+        }
+
+        function handlePaymentSuccess(response) {
+            console.log('Payment success:', response);
+            
+            // Show success message
+            showNotification(i18n[state.currentLang]['success.order']);
+            
+            // Clear cart
+            state.cart = [];
+            localStorage.setItem('cart', JSON.stringify(state.cart));
+            updateCartCount();
+            renderCartItems();
+            closeCartModal();
+        }
+
+        // ====== UI FUNCTIONS ======
+        function toggleMobileMenu() {
+            const isActive = dom.mobileMenuBtn.classList.toggle('active');
+            dom.mobileMenuOverlay.classList.toggle('active', isActive);
+            dom.mobileMenuContent.classList.toggle('active', isActive);
+            dom.mobileMenuBtn.setAttribute('aria-expanded', isActive);
+        }
+
+        function closeMobileMenu() {
+            dom.mobileMenuBtn.classList.remove('active');
+            dom.mobileMenuOverlay.classList.remove('active');
+            dom.mobileMenuContent.classList.remove('active');
+            dom.mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        }
+
+        function openCartModal() {
+            state.isCartOpen = true;
+            renderCartItems();
+            dom.cartModalOverlay.classList.add('active');
+            dom.cartModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCartModal() {
+            state.isCartOpen = false;
+            dom.cartModalOverlay.classList.remove('active');
+            dom.cartModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function showNotification(message, duration = 4000) {
+            dom.notification.textContent = message;
+            dom.notification.classList.add('show');
+            
+            setTimeout(() => {
+                dom.notification.classList.remove('show');
+            }, duration);
+        }
+
+        // ====== EVENT LISTENERS ======
+        function setupEventListeners() {
+            // Language switcher
+            dom.langButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const lang = btn.dataset.lang;
+                    if (lang !== state.currentLang) {
+                        setLanguage(lang);
+                    }
+                });
+            });
+            
+            // Mobile menu
+            dom.mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+            dom.mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+            
+            // Mobile menu links
+            document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    if (link.id === 'mobile-cart-link') {
+                        e.preventDefault();
+                        closeMobileMenu();
+                        setTimeout(openCartModal, 300);
+                    } else {
+                        closeMobileMenu();
+                    }
+                });
+            });
+            
+            // Cart
+            dom.desktopCartIcon.addEventListener('click', openCartModal);
+            dom.mobileCartLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                openCartModal();
+            });
+            dom.cartModalOverlay.addEventListener('click', closeCartModal);
+            dom.closeCartBtn.addEventListener('click', closeCartModal);
+            
+            // Checkout
+            dom.checkoutBtn.addEventListener('click', processCheckout);
+            
+            // Contact form
+            dom.contactForm.addEventListener('submit', handleContactForm);
+            
+            // Close cart with Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && state.isCartOpen) {
+                    closeCartModal();
+                }
+            });
+            
+            console.log('✅ Event listeners setup complete');
+        }
+
+        function attachMenuEventListeners() {
+            // Quantity buttons
+            document.querySelectorAll('.quantity-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const itemId = this.dataset.item;
+                    const quantityElement = document.querySelector(`.quantity-value[data-item="${itemId}"]`);
+                    let quantity = parseInt(quantityElement.textContent);
+                    
+                    if (this.classList.contains('minus') && quantity > 1) {
+                        quantity--;
+                    } else if (this.classList.contains('plus') && quantity < 10) {
+                        quantity++;
+                    }
+                    
+                    quantityElement.textContent = quantity;
+                });
+            });
+            
+            // Add to cart buttons
+            document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const productId = this.dataset.id;
+                    const quantity = parseInt(document.querySelector(`.quantity-value[data-item="${productId}"]`).textContent);
+                    
+                    // Get sweetness option if applicable
+                    let sweetness = 'with-jaggery';
+                    const product = PRODUCTS.find(p => p.id === productId);
+                    if (product?.hasSweetness) {
+                        const selectedOption = document.querySelector(`input[name="${productId}-sweetness"]:checked`);
+                        sweetness = selectedOption ? selectedOption.value : 'with-jaggery';
+                    }
+                    
+                    addToCart(productId, quantity, sweetness);
+                    
+                    // Reset quantity to 1
+                    document.querySelector(`.quantity-value[data-item="${productId}"]`).textContent = 1;
+                });
+            });
+        }
+
+        function attachCartItemEventListeners() {
+            // Remove buttons
+            document.querySelectorAll('.remove-item').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const index = parseInt(this.dataset.index);
+                    if (confirm(state.currentLang === 'en' 
+                        ? 'Remove this item from cart?' 
+                        : 'हा आयटम कार्टमधून काढून टाकायचा?')) {
+                        removeCartItem(index);
+                    }
+                });
+            });
+            
+            // Quantity buttons in cart
+            document.querySelectorAll('.cart-quantity-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const index = parseInt(this.dataset.index);
+                    const change = this.classList.contains('minus') ? -1 : 1;
+                    updateCartItemQuantity(index, change);
+                });
+            });
+        }
+
+        function setupSmoothScrolling() {
+            dom.navLinks.forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#' || !href.startsWith('#')) return;
+                    
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const targetPosition = target.offsetTop - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Update URL without scrolling
+                        history.pushState(null, null, href);
+                    }
+                });
+            });
+        }
+
+        function setupHeaderScroll() {
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (window.scrollY > 50) {
+                    header.style.padding = '10px 0';
+                    header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
+                } else {
+                    header.style.padding = '15px 0';
+                    header.style.boxShadow = 'var(--shadow)';
+                }
+            });
+        }
+
+        async function handleContactForm(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+            
+            // In production, you would send this to your backend
+            console.log('Form submission:', formData);
+            
+            // Show success message
+            showNotification(i18n[state.currentLang]['success.contact']);
+            
+            // Reset form
+            dom.contactForm.reset();
+            
+            // Update placeholders
+            updateFormPlaceholders();
+        }
+
+        // ====== INITIALIZE ======
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
